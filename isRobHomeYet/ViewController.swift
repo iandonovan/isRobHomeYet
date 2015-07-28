@@ -15,12 +15,18 @@ class ViewController: UIViewController {
   @IBOutlet weak var minutesLabel: UILabel?
   @IBOutlet weak var secondsLabel: UILabel?
   @IBOutlet weak var yesOrNoLabel: UILabel?
+  @IBOutlet weak var isRobLabel: UILabel?
+  @IBOutlet weak var homeYetLabel: UILabel?
+  @IBOutlet weak var countdownToRobLabel: UILabel?
   
   let countdown = CountdownTimer()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     yesOrNoLabel?.text = "NO"
+    spaceOutLabelText(isRobLabel, fontSize: 20.0)
+    spaceOutLabelText(homeYetLabel, fontSize: 20.0)
+    spaceOutLabelText(countdownToRobLabel, fontSize: 15.0)
     var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("tick:"), userInfo: nil, repeats: true)
   }
   
@@ -35,6 +41,21 @@ class ViewController: UIViewController {
         secondsLabel?.text = "00"
         timer.invalidate()
       }
+    }
+  }
+  
+  func spaceOutLabelText(label: UILabel?, fontSize: CGFloat) {
+    var font = UIFont(name: "Monterrat-Bold", size: fontSize)
+    if (font == nil) { font = UIFont.systemFontOfSize(fontSize) }
+    let attributes: [String:AnyObject] = [
+      NSKernAttributeName: NSNumber(float: Float(fontSize)),
+      NSFontAttributeName: font!,
+      NSForegroundColorAttributeName: UIColor.whiteColor()
+    ]
+    if let labelText = label?.text {
+      let kernString = NSMutableAttributedString(string: labelText, attributes: attributes)
+      println(kernString)
+      label?.attributedText = kernString
     }
   }
   
