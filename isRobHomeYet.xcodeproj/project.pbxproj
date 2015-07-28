@@ -38,6 +38,8 @@
 		CD6365E61B64412700A10E9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD6365E71B64412700A10E9B /* isRobHomeYetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isRobHomeYetTests.swift; sourceTree = "<group>"; };
 		CD6365F11B64414500A10E9B /* CountdownTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
+		CDA25C461B67112500DB0706 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		CDA25C481B67113A00DB0706 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,8 @@
 		CD6365CF1B64412700A10E9B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CDA25C461B67112500DB0706 /* Montserrat-Bold.ttf */,
+				CDA25C481B67113A00DB0706 /* Roboto-Thin.ttf */,
 				CD6365D01B64412700A10E9B /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -413,6 +417,7 @@
 				CD6365ED1B64412700A10E9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD6365EE1B64412700A10E9B /* Build configuration list for PBXNativeTarget "isRobHomeYetTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				CD6365F01B64412700A10E9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
