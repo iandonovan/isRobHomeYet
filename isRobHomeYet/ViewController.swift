@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     }
   }
   
-  func putTimesInLabels(timeTuple: (weeks: Int, days: Int, hours: Int, minutes: Int, seconds: Int)) {
+  func putTimesInLabels(timeTuple: CountdownTimer.timeTuple) {
     weeksLabel?.text = String(format: "%02d", timeTuple.weeks)
     daysLabel?.text = String(format: "%02d", timeTuple.days)
     hoursLabel?.text = String(format: "%02d", timeTuple.hours)

@@ -10,6 +10,7 @@ import Foundation
 
 struct CountdownTimer {
   let robsReturn: NSDate?
+  typealias timeTuple = (weeks: Int, days: Int, hours: Int, minutes: Int, seconds: Int)
 
   init() {
     var formatter = NSDateFormatter()
@@ -26,7 +27,7 @@ struct CountdownTimer {
     }
   }
   
-  func getTimeTuple(var seconds: Int) -> (weeks: Int, days: Int, hours: Int, minutes: Int, seconds: Int) {
+  func getTimeTuple(var seconds: Int) -> timeTuple {
     let weeks = seconds / (60*60*24*7)
     seconds = seconds % (60*60*24*7)
     let days = seconds / (60*60*24)
