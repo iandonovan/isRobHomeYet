@@ -26,7 +26,7 @@ struct CountdownTimer {
     }
   }
   
-  func getTimeDictionary(var seconds: Int) -> [String: Int] {
+  func getTimeTuple(var seconds: Int) -> (weeks: Int, days: Int, hours: Int, minutes: Int, seconds: Int) {
     let weeks = seconds / (60*60*24*7)
     seconds = seconds % (60*60*24*7)
     let days = seconds / (60*60*24)
@@ -35,12 +35,12 @@ struct CountdownTimer {
     seconds = seconds % (60*60)
     let minutes = seconds / 60
     seconds = seconds % 60
-    return [
-      "weeks": weeks,
-      "days": days,
-      "hours": hours,
-      "minutes": minutes,
-      "seconds": seconds
-    ]
+    return (
+      weeks: weeks,
+      days: days,
+      hours: hours,
+      minutes: minutes,
+      seconds: seconds
+    )
   }
 }

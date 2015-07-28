@@ -27,8 +27,8 @@ class ViewController: UIViewController {
   func tick(timer: NSTimer) {
     if let secondsUntilRob = countdown.secondsUntilRobComesHome() {
       if secondsUntilRob > 0 {
-        let timeDictionary = countdown.getTimeDictionary(secondsUntilRob)
-        putTimesInLabels(timeDictionary)
+        let timeTuple = countdown.getTimeTuple(secondsUntilRob)
+        putTimesInLabels(timeTuple)
       }
       else {
         yesOrNoLabel?.text = "YES"
@@ -38,22 +38,12 @@ class ViewController: UIViewController {
     }
   }
   
-  func putTimesInLabels(timeDictionary: [String: Int]) {
-    if let weeksLeft = timeDictionary["weeks"] {
-      weeksLabel?.text = String(format: "%02d", weeksLeft)
-    }
-    if let daysLeft = timeDictionary["days"] {
-      daysLabel?.text = String(format: "%02d", daysLeft)
-    }
-    if let hoursLeft = timeDictionary["hours"] {
-      hoursLabel?.text = String(format: "%02d", hoursLeft)
-    }
-    if let minutesLeft = timeDictionary["minutes"] {
-      minutesLabel?.text = String(format: "%02d", minutesLeft)
-    }
-    if let secondsLeft = timeDictionary["seconds"] {
-      secondsLabel?.text = String(format: "%02d", secondsLeft)
-    }
+  func putTimesInLabels(timeTuple: (weeks: Int, days: Int, hours: Int, minutes: Int, seconds: Int)) {
+    weeksLabel?.text = String(format: "%02d", timeTuple.weeks)
+    daysLabel?.text = String(format: "%02d", timeTuple.days)
+    hoursLabel?.text = String(format: "%02d", timeTuple.hours)
+    minutesLabel?.text = String(format: "%02d", timeTuple.minutes)
+    secondsLabel?.text = String(format: "%02d", timeTuple.seconds)
   }
 }
 
