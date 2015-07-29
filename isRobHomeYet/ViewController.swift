@@ -9,19 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-  @IBOutlet weak var weeksLabel: UILabel?
-  @IBOutlet weak var daysLabel: UILabel?
-  @IBOutlet weak var hoursLabel: UILabel?
-  @IBOutlet weak var minutesLabel: UILabel?
-  @IBOutlet weak var secondsLabel: UILabel?
-  @IBOutlet weak var yesOrNoLabel: UILabel?
-  
+    @IBOutlet weak var weeksLabel: UILabel?
+    @IBOutlet weak var daysLabel: UILabel?
+    @IBOutlet weak var hoursLabel: UILabel?
+    @IBOutlet weak var minutesLabel: UILabel?
+    @IBOutlet weak var secondsLabel: UILabel?
+    @IBOutlet weak var isRobLabel: UILabel!
+    
+    
   let countdown = CountdownTimer()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    yesOrNoLabel?.text = "NO"
     var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("tick:"), userInfo: nil, repeats: true)
+    
+
+
   }
   
   func tick(timer: NSTimer) {
@@ -31,7 +34,7 @@ class ViewController: UIViewController {
         putTimesInLabels(timeDictionary)
       }
       else {
-        yesOrNoLabel?.text = "YES"
+        //yesOrNoLabel?.text = "YES"
         secondsLabel?.text = "00"
         timer.invalidate()
       }
