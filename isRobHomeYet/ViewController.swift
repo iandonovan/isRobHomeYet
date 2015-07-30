@@ -14,7 +14,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var hoursLabel: UILabel?
   @IBOutlet weak var minutesLabel: UILabel?
   @IBOutlet weak var secondsLabel: UILabel?
-  @IBOutlet weak var yesOrNoLabel: UILabel?
+  @IBOutlet weak var yesOrNoImage: UIImageView?
   @IBOutlet weak var isRobLabel: UILabel?
   @IBOutlet weak var homeYetLabel: UILabel?
   @IBOutlet weak var countdownToRobLabel: UILabel?
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    yesOrNoLabel?.text = "NO"
+    yesOrNoImage?.image = UIImage(named: "no.png")
     spaceOutLabelText(isRobLabel, fontSize: 20.0)
     spaceOutLabelText(homeYetLabel, fontSize: 20.0)
     spaceOutLabelText(countdownToRobLabel, fontSize: 15.0)
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         putTimesInLabels(timeTuple)
       }
       else {
-        yesOrNoLabel?.text = "YES"
+        yesOrNoImage?.image = UIImage(named: "yes.png")
         secondsLabel?.text = "00"
         timer.invalidate()
       }

@@ -195,7 +195,9 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="countdownToRobLabel" destination="qiA-F7-ixV" id="hqP-1d-CwY"/>
                         <outlet property="daysLabel" destination="UdR-nQ-Rvc" id="ckN-Fv-b9d"/>
+                        <outlet property="homeYetLabel" destination="B03-27-xCB" id="NxJ-Ph-Ljz"/>
                         <outlet property="hoursLabel" destination="hrW-Js-B4H" id="xn4-T8-e27"/>
                         <outlet property="isRobLabel" destination="AhL-nZ-Uy4" id="sK7-fl-55h"/>
                         <outlet property="minutesLabel" destination="7ab-7c-nMX" id="crU-Dr-ZeG"/>
