@@ -54,7 +54,6 @@ class ViewController: UIViewController {
     ]
     if let labelText = label?.text {
       let kernString = NSMutableAttributedString(string: labelText, attributes: attributes)
-      println(kernString)
       label?.attributedText = kernString
     }
   }
