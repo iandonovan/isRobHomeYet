@@ -24,9 +24,9 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     yesOrNoImage.image = UIImage(named: "no.png")
-    spaceOutLabelText(isRobLabel, fontSize: 20.0)
-    spaceOutLabelText(homeYetLabel, fontSize: 20.0)
-    spaceOutLabelText(countdownToRobLabel, fontSize: 15.0)
+    spaceOutLabelText(isRobLabel, fontSize: 20.0, fontName: "Monterrat-Bold")
+    spaceOutLabelText(homeYetLabel, fontSize: 20.0, fontName: "Monterrat-Bold")
+    spaceOutLabelText(countdownToRobLabel, fontSize: 13.0, fontName: "Roboto-Thin")
     var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("tick:"), userInfo: nil, repeats: true)
   }
   
@@ -44,8 +44,8 @@ class ViewController: UIViewController {
     }
   }
   
-  func spaceOutLabelText(label: UILabel?, fontSize: CGFloat) {
-    var font = UIFont(name: "Monterrat-Bold", size: fontSize)
+  func spaceOutLabelText(label: UILabel?, fontSize: CGFloat, fontName: String) {
+    var font = UIFont(name: fontName, size: fontSize)
     if (font == nil) { font = UIFont.systemFontOfSize(fontSize) }
     let attributes: [String:AnyObject] = [
       NSKernAttributeName: NSNumber(float: Float(fontSize)),
