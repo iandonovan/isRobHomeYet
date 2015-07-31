@@ -204,6 +204,7 @@
                         <outlet property="secondsLabel" destination="PXR-S3-9Xf" id="V7j-4f-HBf"/>
                         <outlet property="view" destination="tQa-5q-edM" id="c5E-Ky-2xs"/>
                         <outlet property="weeksLabel" destination="xm8-0b-zTg" id="qJS-ft-UvV"/>
+                        <outlet property="yesOrNoImage" destination="tQa-5q-edM" id="aQ7-Xb-PQj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
