@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     yesOrNoImage.image = UIImage(named: "no.png")
     spaceOutLabelText(isRobLabel, fontSize: 20.0, fontName: "Monterrat-Bold")
     spaceOutLabelText(homeYetLabel, fontSize: 20.0, fontName: "Monterrat-Bold")
-    spaceOutLabelText(countdownToRobLabel, fontSize: 13.0, fontName: "Roboto-Thin")
+    spaceOutLabelText(countdownToRobLabel, fontSize: 12.0, fontName: "Roboto-Thin")
     var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("tick:"), userInfo: nil, repeats: true)
   }
   
