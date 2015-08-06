@@ -9,10 +9,24 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5.5_Screen_3" translatesAutoresizingMaskIntoConstraints="NO" id="snV-PV-1Xa">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="snV-PV-1Xa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4mJ-Zv-fSO"/>
+                <constraint firstAttribute="trailing" secondItem="snV-PV-1Xa" secondAttribute="trailing" id="9g0-Sz-tzx"/>
+                <constraint firstAttribute="bottom" secondItem="snV-PV-1Xa" secondAttribute="bottom" id="Ffe-zW-zyP"/>
+                <constraint firstItem="snV-PV-1Xa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Nj3-We-SWd"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="5.5_Screen_3" width="1242" height="2208"/>
+    </resources>
 </document>
